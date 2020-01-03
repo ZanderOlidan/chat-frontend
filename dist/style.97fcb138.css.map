@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAQA;EACI,YATM","file":"style.97fcb138.css","sourceRoot":"..","sourcesContent":["$body-bg: #111b24;\n$phone-bg: #15222D;\n$bubble-bg: #0C343B;\n$bubble-color: #E6F1F4;\n$date-color: #476A71;\n$user1-color: #00B2D8;\n$user2-color: #6B94D6;\n\nbody {\n    background: $body-bg;\n}\n"]}

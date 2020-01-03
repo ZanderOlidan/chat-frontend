@@ -1,0 +1,106 @@
+body {
+  background: #111b24;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100%;
+  background: #101A24;
+  margin: 0 auto;
+  position: relative;
+}
+.wrapper .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.wrapper .header .notification-bar {
+  height: 1.2rem;
+  width: 100vw;
+  background: #202E37;
+}
+.wrapper .header .nav-title {
+  height: 2rem;
+  width: 100%;
+  background: #202E37;
+}
+.wrapper .message-list {
+  margin-top: 3.2rem;
+}
+.wrapper .messages {
+  display: flex;
+  max-width: 90%;
+  min-width: 40%;
+}
+.wrapper .messages .avatar {
+  height: 64px;
+  width: 64px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0.5rem;
+  z-index: 2;
+  align-self: flex-end;
+}
+.wrapper .bubble {
+  background: #202E37;
+  color: #E6F1F4;
+  margin: 0.5rem 0;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 1.5rem;
+  min-width: 30%;
+  position: relative;
+  z-index: 1;
+}
+.wrapper .bubble:before {
+  content: "";
+  height: 30px;
+  width: 2rem;
+  background: #202E37;
+  position: absolute;
+  left: -1rem;
+  bottom: 0;
+  border-bottom-right-radius: 2.5rem;
+  z-index: -1;
+}
+.wrapper .bubble:after {
+  content: "";
+  height: 2.5rem;
+  width: 1.5rem;
+  background: #101A24;
+  position: absolute;
+  left: -1.5rem;
+  bottom: -0.2rem;
+  border-bottom-right-radius: 2.5rem;
+}
+.wrapper .bubble .username {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #979EE5;
+}
+.wrapper .bubble .reply-mention {
+  padding-left: 0.5rem;
+  border-left: 3px solid #87CAF3;
+  margin-bottom: 0.5rem;
+}
+.wrapper .bubble .reply-mention .username {
+  color: #87CAF3;
+}
+.wrapper .bubble .post-date {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  font-style: italic;
+  color: #66777F;
+  font-size: 0.8rem;
+}
+.wrapper .footer {
+  z-index: 10;
+  height: 2rem;
+  position: fixed;
+}
+
+/*# sourceMappingURL=/style.6b54f5b7.css.map */

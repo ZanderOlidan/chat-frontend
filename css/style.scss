@@ -1,0 +1,138 @@
+@import "./breakpoints.scss";
+
+$body-bg: #111b24;
+$phone-bg: #101A24;
+$bubble-bg: #202E37;
+$bubble-color: #E6F1F4;
+$date-color: #66777F;
+$mention-color: #87CAF3;
+$user2-color: #979EE5;
+
+body {
+  background: $body-bg;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100%;
+//   width: 720px;
+//   height: 1280px;
+  background: $phone-bg;
+  margin: 0 auto;
+  position: relative;
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .notification-bar {
+        height: 1.2rem;
+        width: 100vw;
+        background: $bubble-bg;
+    }
+
+    .nav-title {
+        height: 2rem;
+        width: 100%;
+        background: $bubble-bg;
+    }
+  }
+
+  .message-list {
+    margin-top: 3.2rem;
+  }
+  
+  .messages {
+    display: flex;
+    max-width: 90%;
+    min-width: 40%;
+    
+    .avatar {
+      height: 64px;
+      width: 64px;
+      background: gray;
+      border-radius: 50%;
+      margin: 0.5rem;
+      z-index: 2; // bubble stacking
+      align-self: flex-end;
+    }
+    
+  }
+  
+    
+  .bubble {
+    background: $bubble-bg;
+    color: $bubble-color;
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 1.5rem;
+    min-width: 30%;
+    position: relative;
+    z-index: 1;
+
+    
+    &:before { // chatpart
+    
+      content: "";
+      height: 30px;
+      width: 2rem;
+      background: $bubble-bg;
+      position: absolute;
+      left: -1rem;
+      bottom: 0;
+      border-bottom-right-radius: 2.5rem;
+      z-index: -1;
+    }
+    
+    &:after { //cover
+      content: "";
+      height: 2.5rem;
+      width: 1.5rem;
+      background: $phone-bg;
+      position: absolute;
+      left: -1.5rem;
+      bottom: -0.2rem;
+      border-bottom-right-radius: 2.5rem;
+    }
+
+    .username {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $user2-color;
+    }
+
+    .reply-mention {
+      padding-left: 0.5rem;
+      border-left: 3px solid $mention-color;
+      margin-bottom: 0.5rem;
+      
+      .username {
+        color: $mention-color;
+      }
+    }
+
+    .post-date {
+      position: absolute;
+      right: 1rem;
+      bottom: 0.5rem;
+      font-style: italic;
+      color: $date-color;
+      font-size: 0.8rem;
+    }
+  }
+
+  .footer {
+    z-index: 10;
+    height: 2rem;
+    position: fixed;
+    
+  }
+}
+
+
+

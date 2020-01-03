@@ -1,0 +1,10 @@
+$phone-size: 599px;
+$table-portrait-size: 600px;
+
+@mixin phone-only {
+    @media (max-width: $phone-size) { @content; }
+}
+
+@mixin tablet-up {
+    @media (min-width: 600px) { @content; }
+}
